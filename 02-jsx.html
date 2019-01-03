@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>JSX</title>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@16.3.1/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@16.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+<script type="text/babel">
+    const rootElement = document.getElementById('root');
+    /*const element = React.createElement(
+        'div',
+        {className: 'container',
+            children: 'Hello World'}
+    );*/
+    const content = 'Hello World';
+    const myClassName = 'container';
+    const props = {
+      className: 'container',
+      children: 'Hello World'
+    };
+    const element = <div {...props} className="my-class"/>;
+    //const element = <div className={myClassName}>{(() =>content) ()}</div>;
+    ReactDOM.render(element, rootElement);
+
+</script>
+</body>
+</html>
