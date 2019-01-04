@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <title>Components</title>
-</head>
-<body>
-<div id="root"></div>
-<script src="https://unpkg.com/react@16.3.1/umd/react.production.min.js"></script>
-<script src="https://unpkg.com/react-dom@16.3.1/umd/react-dom.production.min.js"></script>
-<script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
-<script type="text/babel">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Components</title>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script src="https://unpkg.com/react@16.3.1/umd/react.production.min.js"></script>
+        <script src="https://unpkg.com/react-dom@16.3.1/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+        <script type="text/babel">
 
-    const rootElement = document.getElementById('root');
-    const Message = (props) => <div>{props.children}</div>;
-    const element = (
-        <div className="container">
-            <Message>
-                Hello World
-                <Message>Goodbye World</Message>
-            </Message>
-        </div>
-    );
-    ReactDOM.render(element, rootElement);
-    console.log(element);
-</script>
-</body>
+            const rootElement = document.getElementById('root');
+            const Message = (props) => <div>{props.children}</div>;
+            const element = (
+                <div className="container">
+                    <Message>
+                        Hello World
+                        <Message>Goodbye World</Message>
+                    </Message>
+                </div>
+            );
+            ReactDOM.render(element, rootElement);
+            console.log(element);
+        </script>
+    </body>
 </html>
